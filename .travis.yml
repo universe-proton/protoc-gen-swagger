@@ -1,5 +1,5 @@
 language: python
-dist: precise
+dist: trusty
 cache: pip
 python:
   - 3.4
@@ -12,9 +12,10 @@ os:
 env:
   global:
   - PYTHONUNBUFFERED=yes
-
-install:
-  - travis_retry pip install -U tox | cat
+  matrix:
+  - MATRIX_TOXENV=unit
+before_install:
+  - if [[ -v MATRIX_TOXENV ]]; then export TOXENV=${TRAVIS_PYTHON_VERSION}-${MATRIX_TOXENV}; fi; env
 
 script:
     - tox -vv
