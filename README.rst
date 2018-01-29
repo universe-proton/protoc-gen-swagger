@@ -2,6 +2,10 @@
 protoc-gen-swagger
 ====================
 
+.. image:: https://travis-ci.org/universe-proton/protoc-gen-swagger.svg?branch=master
+    :target: https://travis-ci.org/universe-proton/protoc-gen-swagger
+
+
 A python package for swagger's annotation protobuf files, which are located inside `grpc-gateway <https://github.com/grpc-ecosystem/grpc-gateway>`_ repository.
 
 `Swagger <https://swagger.io/>`_ is a popular api tool. When you import swagger proto files in your protobuf message file, you may get stuck when using the generated python code.
