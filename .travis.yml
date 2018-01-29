@@ -1,0 +1,23 @@
+language: python
+dist: precise
+cache: pip
+python:
+  - 3.4
+  - 3.5
+  - 3.6
+
+os:
+  - linux
+
+env:
+  global:
+  - PYTHONUNBUFFERED=yes
+
+install:
+  - travis_retry pip install -U tox | cat
+
+script:
+    - tox -vv
+notifications:
+    on_success: change
+    on_failure: change  # `always` will be the setting once code changes slow down
