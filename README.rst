@@ -37,8 +37,10 @@ or installing from git
 Maintain
 =========
 
-When the source repository `grpc-gateway <https://github.com/grpc-ecosystem/grpc-gateway>` is taged, we can use command `bash gen.sh <tag-version>` to update the package.
+When the source repository `grpc-gateway <https://github.com/grpc-ecosystem/grpc-gateway>`_ is taged, we can use command `bash gen.sh <tag-version>` to update the package.
 Maybe we could do some automated work in the future.
+
+Now, this package version 0.1.0 is the same as grpc-gateway version v1.3.1 .
 
 
 How to Contribute
