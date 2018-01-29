@@ -23,6 +23,8 @@ function main(){
 
     protoc -I ./grpc-gateway/ --python_out=../ ./grpc-gateway/protoc-gen-swagger/options/annotations.proto ./grpc-gateway/protoc-gen-swagger/options/openapiv2.proto
 
+    cd .. && rm -rf tmp
+
 }
 
 main "$@"

@@ -30,7 +30,7 @@ class PyTest(TestCommand):
 
 setup(name='protoc-gen-swagger',
       version=version,
-      description=" A python package for swagger proto files.",
+      description=" A python package for swagger annotation proto files.",
       long_description=open(
           os.path.join(os.path.dirname(__file__), 'README.rst')).read(),
       classifiers=(
