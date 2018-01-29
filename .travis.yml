@@ -17,8 +17,12 @@ env:
 before_install:
   - if [[ -v MATRIX_TOXENV ]]; then export TOXENV=${TRAVIS_PYTHON_VERSION}-${MATRIX_TOXENV}; fi; env
 
+install:
+  - travis_retry pip install -U tox | cat
+
 script:
     - tox -vv
+
 notifications:
     on_success: change
     on_failure: change  # `always` will be the setting once code changes slow down
